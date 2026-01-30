@@ -1,0 +1,218 @@
+Current runner version: '2.331.0'
+Runner Image Provisioner
+Operating System
+Runner Image
+GITHUB_TOKEN Permissions
+Secret source: Actions
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+Download action repository 'actions/setup-node@v3' (SHA:3235b876344d2a9aa001b8d1453c930bba69e610)
+Complete job name: build
+0s
+Run actions/checkout@v3
+Syncing repository: monteiroRui/ci-cd-final-project
+Getting Git version info
+Temporarily overriding HOME='/home/runner/work/_temp/fad87e3b-6c43-4707-ad4f-9dfaf18a343f' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+/usr/bin/git config --global --add safe.directory /home/runner/work/ci-cd-final-project/ci-cd-final-project
+Deleting the contents of '/home/runner/work/ci-cd-final-project/ci-cd-final-project'
+Initializing the repository
+Disabling automatic garbage collection
+Setting up auth
+Fetching the repository
+Determining the checkout info
+Checking out the ref
+/usr/bin/git log -1 --format='%H'
+'4ff2cb43f2cc240a8c0254191dbaa1498615c788'
+1s
+Run actions/setup-node@v3
+Found in cache @ /opt/hostedtoolcache/node/20.20.0/x64
+Environment details
+7s
+Run npm ci
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated superagent@8.1.2: Please upgrade to v9.0.0+ as we have fixed a public vulnerability with formidable dependency. Note that v9.0.0+ requires Node.js v14.18.0+. See https://github.com/ladjs/superagent/pull/1800 for insight. This project is supported and maintained by the team at Forward Email @ https://forwardemail.net
+npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+added 552 packages, and audited 553 packages in 7s
+
+144 packages are looking for funding
+  run `npm fund` for details
+
+9 vulnerabilities (2 low, 3 moderate, 3 high, 1 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+1s
+Run npm run lint
+
+> counter-service@1.0.0 lint
+> eslint src/ tests/
+
+1s
+Run npm test
+
+> counter-service@1.0.0 test
+> jest
+
+  console.log
+    [2026-01-30T15:53:59.278Z] [INFO] Logging handler established
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+  console.log
+    [2026-01-30T15:53:59.321Z] [INFO] Request for Base URL
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "GET / HTTP/1.1" 200 104 "-" "-"
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "GET /health HTTP/1.1" 200 15 "-" "-"
+  console.log
+    [2026-01-30T15:53:59.348Z] [INFO] Request to Create counter: foo...
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "POST /counters/foo HTTP/1.1" 201 26 "-" "-"
+  console.log
+    [2026-01-30T15:53:59.354Z] [INFO] Request to Create counter: foo...
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "POST /counters/foo HTTP/1.1" 201 26 "-" "-"
+  console.log
+    [2026-01-30T15:53:59.359Z] [INFO] Request to Create counter: foo...
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "POST /counters/foo HTTP/1.1" 409 72 "-" "-"
+  console.log
+    [2026-01-30T15:53:59.365Z] [INFO] Request to list all counters...
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "GET /counters HTTP/1.1" 200 2 "-" "-"
+  console.log
+    [2026-01-30T15:53:59.371Z] [INFO] Request to Create counter: foo...
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "POST /counters/foo HTTP/1.1" 201 26 "-" "-"
+  console.log
+    [2026-01-30T15:53:59.376Z] [INFO] Request to list all counters...
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "GET /counters HTTP/1.1" 200 28 "-" "-"
+  console.log
+    [2026-01-30T15:53:59.381Z] [INFO] Request to Create counter: foo...
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "POST /counters/foo HTTP/1.1" 201 26 "-" "-"
+  console.log
+    [2026-01-30T15:53:59.387Z] [INFO] Request to Read counter: foo...
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "GET /counters/foo HTTP/1.1" 200 26 "-" "-"
+  console.log
+    [2026-01-30T15:53:59.394Z] [INFO] Request to Read counter: nonexistent...
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "GET /counters/nonexistent HTTP/1.1" 404 81 "-" "-"
+  console.log
+    [2026-01-30T15:53:59.399Z] [INFO] Request to Create counter: foo...
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "POST /counters/foo HTTP/1.1" 201 26 "-" "-"
+  console.log
+    [2026-01-30T15:53:59.403Z] [INFO] Request to Update counter: foo...
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "PUT /counters/foo HTTP/1.1" 200 26 "-" "-"
+  console.log
+    [2026-01-30T15:53:59.412Z] [INFO] Request to Update counter: nonexistent...
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "PUT /counters/nonexistent HTTP/1.1" 404 81 "-" "-"
+  console.log
+    [2026-01-30T15:53:59.417Z] [INFO] Request to Create counter: foo...
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "POST /counters/foo HTTP/1.1" 201 26 "-" "-"
+  console.log
+    [2026-01-30T15:53:59.422Z] [INFO] Request to Delete counter: foo...
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "DELETE /counters/foo HTTP/1.1" 204 - "-" "-"
+  console.log
+    [2026-01-30T15:53:59.427Z] [INFO] Request to Delete counter: foo...
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "DELETE /counters/foo HTTP/1.1" 204 - "-" "-"
+  console.log
+    [2026-01-30T15:53:59.432Z] [INFO] Request to Read counter: foo...
+
+      at Object.log [as info] (src/middleware/logger.js:6:15)
+
+::ffff:127.0.0.1 - - [30/Jan/2026:15:53:59 +0000] "GET /counters/foo HTTP/1.1" 404 73 "-" "-"
+PASS tests/counters.test.js
+  Counter API Service
+    GET /
+      ✓ should return service information (42 ms)
+    GET /health
+      ✓ should return health status (3 ms)
+    POST /counters/:name
+      ✓ should create a new counter (7 ms)
+      ✓ should not create a duplicate counter (11 ms)
+    GET /counters
+      ✓ should list all counters (16 ms)
+    GET /counters/:name
+      ✓ should read a specific counter (12 ms)
+      ✓ should return 404 for non-existent counter (5 ms)
+    PUT /counters/:name
+      ✓ should update (increment) a counter (9 ms)
+      ✓ should not update a missing counter (9 ms)
+    DELETE /counters/:name
+      ✓ should delete a counter (20 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        0.767 s
+Ran all test suites.
+0s
+Post job cleanup.
+0s
+Post job cleanup.
+/usr/bin/git version
+git version 2.52.0
+Temporarily overriding HOME='/home/runner/work/_temp/858c13ac-6dbd-4c07-82b7-16b9996ab8d7' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+/usr/bin/git config --global --add safe.directory /home/runner/work/ci-cd-final-project/ci-cd-final-project
+/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+http.https://github.com/.extraheader
+/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+0s
+Cleaning up orphan processes
